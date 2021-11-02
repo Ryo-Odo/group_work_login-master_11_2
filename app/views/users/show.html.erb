@@ -1,0 +1,22 @@
+<h1><%= @user.name %>'s page</h1>
+<p>your email:<%= @user.email %></p>
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Content</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @user_faborite.each do |blog| %>
+      <tr>
+        <td><%= blog.title %></td>
+        <td><%= blog.content %></td>
+        <td><%= blog.user_id %></td>
+        <td><%= link_to 'Show', blog %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
